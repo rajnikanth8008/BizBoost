@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.bizboost.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.example.bizboost.ui.account.AccountFragment"
+        android:label="@string/account"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/nav_businessform"
+        android:name="com.example.bizboost.ui.businessforms.BusinessFormsFragment"
+        android:label="@string/business_forms"
+        tools:layout="@layout/fragment_businessforms" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.bizboost.ui.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_refer"
+        android:name="com.example.bizboost.ui.refer.ReferFragment"
+        android:label="@string/refer"
+        tools:layout="@layout/fragment_refer" />
+
+    <fragment
+        android:id="@+id/nav_help"
+        android:name="com.example.bizboost.ui.help.HelpFragment"
+        android:label="@string/help"
+        tools:layout="@layout/fragment_help" />
+
+    <fragment
+        android:id="@+id/nav_tandc"
+        android:name="com.example.bizboost.ui.termsandconditions.TermsAndConditionsFragment"
+        android:label="@string/terms_and_conditions"
+        tools:layout="@layout/fragment_terms_and_conditions" />
+
+    <fragment
+        android:id="@+id/nav_aboutus"
+        android:name="com.example.bizboost.ui.aboutus.AboutUsFragment"
+        android:label="@string/about_us"
+        tools:layout="@layout/fragment_about_us" />
+</navigation>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_account"
+            android:title="@string/account" />
+        <item
+            android:id="@+id/nav_businessform"
+            android:icon="@drawable/ic_business_forms"
+            android:title="@string/business_forms" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/settings" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_refer"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/refer" />
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help_operator"
+                android:title="@string/help" />
+            <item
+                android:id="@+id/nav_tandc"
+                android:icon="@drawable/ic_tandc"
+                android:title="@string/terms_and_conditions" />
+            <item
+                android:id="@+id/nav_aboutus"
+                android:icon="@drawable/ic_about_us"
+                android:title="@string/about_us" />
+        </menu>
+    </item>
+
+</menu>

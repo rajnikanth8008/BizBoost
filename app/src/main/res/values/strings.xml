@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">BizBoost</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">abc.xyz@bizboost.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="account">Account</string>
+    <string name="business_forms">Business Forms</string>
+    <string name="refer">Refer</string>
+    <string name="about_us">About Us</string>
+    <string name="help">Help/Support</string>
+    <string name="settings">Settings</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="business_delegate">Business Delegate</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="product_industry">"Product/Industry: "</string>
+    <string name="application_status">"Application Status: "</string>
+
+    <string-array name="stepLabels">
+        <item>Initated</item>
+        <item>Payment Pending</item>
+        <item>Payment Received</item>
+        <item>Photo shoot scheduled</item>
+        <item>Photo shoot completed</item>
+        <item>Design uploaded</item>
+    </string-array>
+
+    <string-array name="Relationship">
+        <item>Mother</item>
+        <item>Father</item>
+        <item>Brother</item>
+        <item>Sister</item>
+        <item>Spouse</item>
+        <item>Others</item>
+    </string-array>
+
+</resources>
