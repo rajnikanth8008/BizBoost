@@ -17,4 +17,14 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+
+    <style name="ETBLCustomerFM">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="paddingStart">@dimen/_2sdp</item>
+        <item name="paddingEnd">@dimen/_1sdp</item>
+        <item name="android:inputType">textNoSuggestions|text|textFilter</item>
+        <item name="android:digits">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ </item>
+        <item name="android:maxLength">30</item>
+    </style>
+
 </resources>
