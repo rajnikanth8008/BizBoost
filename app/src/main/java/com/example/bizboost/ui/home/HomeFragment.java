@@ -34,7 +34,7 @@ public class HomeFragment extends Fragment implements DatePickerDialog.OnDateSet
     Button bt_date, bt_time;
     private DatePickerDialog dpd;
     private TimePickerDialog tpd;
-    StepperIndicator stepper_indicator_one,stepper_indicator_two;
+    StepperIndicator stepper_indicator_one, stepper_indicator_two;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
