@@ -1,81 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:elevation="@dimen/_10sdp"
-    app:cardCornerRadius="@dimen/_10sdp"
-    android:layout_margin="@dimen/_5sdp"
-    app:cardBackgroundColor="@color/lightgray">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_2sdp">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="@dimen/_5sdp">
-
-        <TextView
-            android:id="@+id/tv_bizz_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:fontFamily="@font/baloo"
-            android:text="SwipeWire"
-            android:textSize="@dimen/_15sdp"
-            android:textStyle="bold" />
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:elevation="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/lightgray">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="serif-monospace"
-                android:text="@string/product_industry"
-                android:textSize="@dimen/_12sdp"
+                android:id="@+id/tv_bizz_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/baloo"
+                android:text="SwipeWire"
+                android:textSize="@dimen/_15sdp"
                 android:textStyle="bold" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_bizz_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif-monospace"
+                    android:text="Product/Industry: eCommerce"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/tv_bizz_location"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:fontFamily="serif-monospace"
-                android:text="eCommerce"
+                android:text="Hyderabad"
+                android:gravity="center|left"
                 android:textSize="@dimen/_12sdp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_location"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <TextView
+                android:id="@+id/tv_bizz_app_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="serif-monospace"
+                android:text="@string/application_status"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_2sdp" />
+
+            <com.example.bizboost.StepperIndicator
+                android:layout_weight="1"
+                android:id="@+id/bizz_status_stepper_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:stpi_labels="@array/stepLabels" />
+
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="serif-monospace"
-            android:text="Hyderabad"
-            android:gravity="center"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold"
-            android:drawableStart="@drawable/ic_location"
-            android:layout_marginTop="@dimen/_5sdp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif-monospace"
-            android:text="@string/application_status"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold"
-            android:layout_marginTop="@dimen/_2sdp" />
-
-        <com.example.bizboost.StepperIndicator
-            android:id="@+id/stepper_indicator_one"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp"
-            app:stpi_labels="@array/stepLabels" />
-
-    </LinearLayout>
-
-</androidx.cardview.widget.CardView>
-
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

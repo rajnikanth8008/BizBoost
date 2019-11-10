@@ -13,13 +13,24 @@ public class HomeViewModel extends ViewModel {
     private String appointmentTime;
     private String businessCategory;
     private String applicationStatus;
+    private int applicationStatusPosition;
+
+    public int getApplicationStatusPosition() {
+        return applicationStatusPosition;
+    }
+
+    public void setApplicationStatusPosition(int applicationStatusPosition) {
+        this.applicationStatusPosition = applicationStatusPosition;
+    }
+
     private boolean isAgreedToTerms;
 
-    public HomeViewModel(String nameOfBusiness, String businessLocation, String businessCategory, String applicationStatus) {
+    public HomeViewModel(String nameOfBusiness, String businessLocation, String businessCategory, String applicationStatus, int applicationStatusPosition) {
         this.nameOfBusiness = nameOfBusiness;
         this.businessLocation = businessLocation;
         this.businessCategory = businessCategory;
         this.applicationStatus = applicationStatus;
+        this.applicationStatusPosition = applicationStatusPosition;
     }
 
     public HomeViewModel(String nameOfBusiness, String nameOfApplicant, String businessLocation, String contactNumber, String eMail, String appointmentDate, String appointmentTime, boolean isAgreedToTerms) {

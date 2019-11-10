@@ -12,17 +12,20 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bizboost.R;
-import com.example.bizboost.StepperIndicator;
+import com.example.bizboost.ui.adapters.BizzStatusViewAdapter;
 import com.google.android.material.textfield.TextInputEditText;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 public class HomeFragment extends Fragment implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
@@ -34,11 +37,11 @@ public class HomeFragment extends Fragment implements DatePickerDialog.OnDateSet
     Button bt_date, bt_time;
     private DatePickerDialog dpd;
     private TimePickerDialog tpd;
-    StepperIndicator stepper_indicator_one, stepper_indicator_two;
+    RecyclerView rv_home_bizz_status;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
+//        homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         initializeControls(root);
 
@@ -47,6 +50,12 @@ public class HomeFragment extends Fragment implements DatePickerDialog.OnDateSet
 
         tv_new_bizz_explore.setText("-");
         ll_add_new_bizz.setVisibility(View.VISIBLE);
+
+        List<HomeViewModel> homeViewModelList = new ArrayList<>();
+        homeViewModelList.add(new HomeViewModel("SwipeWire", "Hyderabad", "Product/Industry: eCommerce", "Application Status: Payment Received", 2));
+        homeViewModelList.add(new HomeViewModel("ZapLabs", "Bangalore", "Product/Industry: Healthcare", "Application Status: Photo shoot completed", 5));
+        BizzStatusViewAdapter bizzStatusViewAdapter = new BizzStatusViewAdapter(getActivity(), homeViewModelList);
+        rv_home_bizz_status.setAdapter(bizzStatusViewAdapter);
 
         tv_reg_bizz_explore.setOnClickListener(v -> {
             tv_reg_bizz_explore.setText(tv_reg_bizz_explore.getText().toString().equals("+") ? "-" : "+");
@@ -146,11 +155,6 @@ public class HomeFragment extends Fragment implements DatePickerDialog.OnDateSet
             ll_reg_bizz_explore = root.findViewById(R.id.ll_reg_bizz_explore);
             ll_add_new_bizz = root.findViewById(R.id.ll_add_new_bizz);
 
-            stepper_indicator_one = root.findViewById(R.id.stepper_indicator_one);
-            stepper_indicator_one.setCurrentStep(2);
-            stepper_indicator_two = root.findViewById(R.id.stepper_indicator_two);
-            stepper_indicator_two.setCurrentStep(4);
-
             et_name_of_bizz = root.findViewById(R.id.et_name_of_bizz);
             et_name_of_applicant = root.findViewById(R.id.et_name_of_applicant);
             et_bizz_location = root.findViewById(R.id.et_bizz_location);
@@ -158,6 +162,9 @@ public class HomeFragment extends Fragment implements DatePickerDialog.OnDateSet
             et_email = root.findViewById(R.id.et_email);
             bt_date = root.findViewById(R.id.bt_date);
             bt_time = root.findViewById(R.id.bt_time);
+
+            rv_home_bizz_status = root.findViewById(R.id.rv_home_bizz_status);
+            rv_home_bizz_status.setLayoutManager(new LinearLayoutManager(getContext()));
         } catch (Exception e) {
             Log.e(TAG, "initializeControls: ", e);
         }

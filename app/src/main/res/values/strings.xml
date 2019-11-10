@@ -23,11 +23,11 @@
     <string name="business_delegate">Business Delegate</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="product_industry">"Product/Industry: "</string>
-    <string name="application_status">"Application Status: "</string>
-    <string name="registered_business">Registered Business</string>
-    <string name="request_new_business">Request New Business</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="product_industry" translatable="false">"Product/Industry: "</string>
+    <string name="application_status" translatable="false">"Application Status: "</string>
+    <string name="registered_business" translatable="false">Registered Business</string>
+    <string name="request_new_business" translatable="false">Request New Business</string>
 
     <string-array name="stepLabels">
         <item>Initated</item>
